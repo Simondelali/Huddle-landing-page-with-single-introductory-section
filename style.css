@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background: var(--violet) url(/images/bg-mobile.svg) no-repeat;
+  background-size: contain;
+}
+
+.sr-only {
+  display: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+header {
+  margin-bottom: 3em;
+}
+
+.header-image {
+  max-width: 140px;
+}
+
+.hero-image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 3em;
+}
+
+.hero-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.75em;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 1.75em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.register-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  color: var(--violet);
+  background-color: #fff;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto 3em;
+  padding: 1em 6em;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  color: #fff;
+  background-color: var(--softMagenta);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 0.35em;
+  margin: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
+  color: var(--softMagenta);
+  border: 1px solid var(--softMagenta);
+}
+
+@media (min-width: 780px) {
+  body {
+    background: #674baf url(/images/bg-desktop.svg) no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    width: 90%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  header {
+    grid-row: 1/2;
+    margin: 0;
+  }
+
+  .header-image {
+    max-width: 220px;
+  }
+
+  .hero-section {
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 60%;
+    max-width: 706px;
+    margin: 3em 0 0;
+  }
+
+  .hero-content {
+    margin-left: 3em;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    text-align: left;
+    max-width: 410px;
+  }
+
+  .hero-text {
+    text-align: left;
+    max-width: 460px;
+  }
+
+  .register-btn {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.75em 3.5em;
+  }
+
+  footer {
+    grid-row: 3/4;
+    justify-self: end;
+  }
+
+  .fa-facebook,
+  .fa-twitter,
+  .fa-instagram {
+    font-size: 1.25rem;
+    margin: 1em 0.5em;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+  }
+}
